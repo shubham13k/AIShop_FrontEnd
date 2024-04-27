@@ -1,0 +1,28 @@
+[
+    {"name": "Ring", "worn_on": "finger"},
+    {"name": "Thumb ring", "worn_on": "finger"},
+    {"name": "Fingerless gloves", "worn_on": "hand"},
+    {"name": "Mood ring", "worn_on": "finger"},
+    {"name": "Wedding band", "worn_on": "finger"},
+    {"name": "Gloves", "worn_on": "hand"},
+    {"name": "Mitten", "worn_on": "hand"},
+    {"name": "Handkerchief", "worn_on": "hand"},
+    {"name": "Bracelet", "worn_on": "hand"},
+    {"name": "Hand warmer", "worn_on": "hand"},
+    {"name": "Mask", "worn_on": "face"},
+    {"name": "Sunglasses", "worn_on": "face"},
+    {"name": "Eyeglasses", "worn_on": "face"},
+    {"name": "Facial mask", "worn_on": "face"},
+    {"name": "Nose ring", "worn_on": "face"},
+    {"name": "Socks", "worn_on": "leg"},
+    {"name": "Leg warmers", "worn_on": "leg"},
+    {"name": "Knee pads", "worn_on": "leg"},
+    {"name": "Garter", "worn_on": "leg"},
+    {"name": "Ankle bracelet", "worn_on": "leg"},
+    {"name": "Shoes", "worn_on": "foot"},
+    {"name": "Boots", "worn_on": "foot"},
+    {"name": "Sandals", "worn_on": "foot"},
+    {"name": "Slippers", "worn_on": "foot"},
+    {"name": "Flip-flops", "worn_on": "foot"}
+  ]
+  

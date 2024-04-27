@@ -1,0 +1,39 @@
+.product-tile {
+  width: 23%; /* Each tile takes up approximately 23% of the container width */
+  margin: 1%; /* Add some margin between tiles */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  display: inline-block; /* Display tiles in a row */
+}
+
+.product-tile img {
+  width: 100%; /* Make the image fill its container */
+  height: 300px; /* Maintain aspect ratio */
+}
+
+.product-info {
+  padding: 10px;
+  background-color: #f8f8f8; /* Light background color for product info */
+  border: 1px solid #ddd; /* Border around product info */
+}
+
+.product-info h3 {
+  margin: 0;
+  font-size: 16px; /* Set font size for product name */
+}
+
+.product-info p {
+  margin: 5px 0 0; /* Adjust margin for price */
+  font-size: 14px; /* Set font size for price */
+}
+
+@media (max-width: 768px) {
+  .product-tile {
+    width: 48%; /* Two tiles per row on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .product-tile {
+    width: 100%; /* One tile per row on smaller screens */
+  }
+}
