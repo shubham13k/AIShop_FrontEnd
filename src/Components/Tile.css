@@ -1,19 +1,25 @@
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .product-tile {
-  width: 23%; /* Each tile takes up approximately 23% of the container width */
-  margin: 1%; /* Add some margin between tiles */
+  width: calc(33.33% - 20px); /* Each tile takes up approximately 33.33% of the container width */
+  margin-bottom: 20px; /* Add some margin between tiles */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  display: inline-block; /* Display tiles in a row */
 }
 
 .product-tile img {
-  width: 100%; /* Make the image fill its container */
-  height: 300px; /* Maintain aspect ratio */
+  max-width: 100%; /* Limit image width to 100% of its container */
+  height: 300px; /* Automatically adjust height based on width */
 }
 
 .product-info {
   padding: 10px;
   background-color: #f8f8f8; /* Light background color for product info */
   border: 1px solid #ddd; /* Border around product info */
+  margin-bottom: 20px;
 }
 
 .product-info h3 {
@@ -26,14 +32,21 @@
   font-size: 14px; /* Set font size for price */
 }
 
+@media (max-width: 992px) {
+  .product-tile {
+    width: calc(50% - 20px); /* Two tiles per row on smaller screens */
+  }
+}
+
 @media (max-width: 768px) {
   .product-tile {
-    width: 48%; /* Two tiles per row on smaller screens */
+    width: calc(50% - 20px); /* Two tiles per row on smaller screens */
   }
 }
 
 @media (max-width: 576px) {
   .product-tile {
-    width: 100%; /* One tile per row on smaller screens */
+    width: calc(100% - 20px); /* One tile per row on smaller screens */
   }
 }
+

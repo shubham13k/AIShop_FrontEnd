@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Tile from './Tile';
 
-function ClothingList({ filter }) {
+function ClothingList() {
   // Define clothing items as arrays
-  const [allClothingItems] = useState([
+  const [allClothingItems,setItems] = useState([
     { name: "Facial mask", worn_on: "face" ,image:"./Clothes/Facial mask.jpeg" },
     { name: "Mood ring", worn_on: "finger",image:"./Clothes/Mood ring.jpeg"  },
     { name: "Eyeglasses", worn_on: "face",image:"./Clothes/Eyeglasses.jpeg"  },
@@ -50,41 +50,9 @@ function ClothingList({ filter }) {
     { name: "Handkerchief", worn_on: "hand" ,image:"./Clothes/Handkerchief.jpeg" },
   ]);
 
-  // State to store filtered items
-  const [filteredClothingItems, setFilteredClothingItems] = useState(allClothingItems);
-
-  // Function to filter items based on worn_on
-  const handleFilter = (wornOn) => {
-    console.log("Filter value:", wornOn); // Log the filter value
-    if (wornOn === '') {
-      // If no filter is selected, show all items
-      setFilteredClothingItems(allClothingItems);
-    } else {
-      // Filter items based on worn_on property
-      const filtered = allClothingItems.filter(item => item.worn_on === wornOn);
-      setFilteredClothingItems(filtered);
-    }
-  };
-
-  // Call the filter function when component is mounted to set initial items
-  useEffect(() => {
-    handleFilter('');
-  }, []);
-
-  // Call the filter function whenever filter prop changes
-  useEffect(() => {
-    filter('');
-  }, [filter]);
-
   return (
     <div>
-      {filteredClothingItems.map((item, index) => (
-        <Tile
-          key={index}
-          name={item.name}
-          image={item.image}
-        />
-      ))}
+      <Tile item={allClothingItems}></Tile>
     </div>
   );
 }
